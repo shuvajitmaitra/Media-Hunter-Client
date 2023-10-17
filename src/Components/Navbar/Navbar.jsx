@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { RxVideo } from 'react-icons/rx';
 
 
@@ -17,7 +17,8 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 fixed z-50">
+    <div className="border-2 w-full md:flex items-center   bg-base-100 fixed z-50">
+      <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <label
@@ -51,9 +52,12 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLink}</ul>
       </div>
-      <div className="navbar-end ">
-        <a className="btn btn-sm md:btn-md bg-[#1D5B79] text-white">Button</a>
       </div>
+      <div className="navbar-end border w-full md:w-fit flex justify-center md:justify-end ">
+        <Link to={"/login"} className="btn btn-sm md:btn-md bg-[#1D5B79] text-white">Login</Link>
+        <Link to={'/register'} className="btn btn-sm md:btn-md bg-[#EF6262] text-white">Join Us</Link>
+      </div>
+      
     </div>
   );
 };
