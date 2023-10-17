@@ -1,6 +1,6 @@
 const AddProduct = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-28 md:pt-20">
       <h2 className="text-xl md:text-4xl text-center font-bold">
         Add Your Media
       </h2>
