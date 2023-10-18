@@ -1,10 +1,45 @@
+import Swal from "sweetalert2";
+
 const AddProduct = () => {
+  const handleAddProduct = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const brand = e.target.brand.value;
+    const price = e.target.price.value;
+    const photo = e.target.photo.value;
+    const type = e.target.type.value;
+    const rating = e.target.rating.value;
+    const description = e.target.description.value;
+
+    console.log(name, brand, price, photo, type, rating, description);
+
+const     product = {name, brand, price, photo, type, rating, description} 
+    fetch('http://localhost:5000/product', {
+      method: 'POST',
+      headers: {
+          'content-type': 'application/json'
+      },
+      body: JSON.stringify(product)
+  })
+      .then(res => res.json())
+      .then(data => {
+          console.log(data);
+          if(data.insertedId){
+              Swal.fire({
+                  title: 'Success!',
+                  text: 'Media Added Successfully',
+                  icon: 'success',
+                  confirmButtonText: 'Cool'
+                })
+          }
+      })
+  };
   return (
     <div className="pt-28 md:pt-20">
       <h2 className="text-xl md:text-4xl text-center font-bold">
         Add Your Media
       </h2>
-      <form>
+      <form onSubmit={handleAddProduct}>
         {/* left side............ */}
         <div className="flex flex-col md:flex-row w-3/4 mx-auto gap-6">
           <div className="flex-1">

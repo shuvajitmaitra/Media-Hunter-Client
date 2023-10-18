@@ -1,0 +1,244 @@
+[
+
+  {  
+    "id": 1,
+    "name":"Avengers: Endgame",
+    "brand":"Disney Plus",
+    "price":230,
+    "photo":"https://i.postimg.cc/x8wm27KQ/67128830.webp",
+    "type":"Movie",
+    "rating": 8.4,
+    "description":"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
+  },
+  { 
+    "id": 2,
+    " name":"Captain Marvel",
+    "brand":"Disney Plus",
+    "price":300,
+    "photo":"https://i.postimg.cc/LsDj1xMk/captain-marvel.jpg",
+    "type":"Movie",
+    "rating" : 6.7,
+    "description":"Carol Danvers becomes one of the universe's most powerful heroes when Earth is caught in the middle of a galactic war between two alien races"
+  },
+  { 
+    "id": 3,
+    " name":"Loki",
+    "brand":"Disney Plus",
+    "price":200,
+    "photo":"https://i.postimg.cc/Sx7MBgj0/loki.webp",
+    "type":"Web Series",
+    "rating": 8.2,
+    "description":"The mercurial villain Loki resumes his role as the God of Mischief in a new series that takes place after the events of “Avengers: Endgame.”"
+  },
+  {
+    "id": 4,
+    " name":"The Falcon",
+    "brand":"Disney Plus",
+    "price":230,
+    "photo":"https://i.postimg.cc/Vky9QSRt/flacon-and-winter-soldier.jpg",
+    "type":"Web Series",
+    "rating": 6.7,
+    "description":"Following the events of 'Avengers: Endgame,' Sam Wilson/Falcon and Bucky Barnes/Winter Soldier team up in a global adventure that tests their abilities -- and their patience."
+  },
+  {
+    "id": 5,
+    " name":"Money Heist",
+    "brand":"Netflix",
+    "price":340,
+    "photo":"https://i.postimg.cc/m29pK1Mx/money-heist.png",
+    "type":"Web Series",
+    "rating": 8.4,
+    "description":"An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain."
+  },
+  {
+    "id": 6,
+    " name":"Extraction",
+    "brand":"Netflix",
+    "price":450,
+    "photo":"https://i.postimg.cc/265hFnzs/Extraction.jpg",
+    "type":"Movie",
+    "rating":6.9,
+    "description":"Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career when he's enlisted to rescue the kidnapped son of an imprisoned international crime lord."
+  },
+  {
+    "id": 7,
+    " name":"Squid Game",
+    "brand":"Netflix",
+    "price":450,
+    "photo":"https://i.postimg.cc/tCB9cfHn/Squid-Game.jpg",
+    "type":"Web Series",
+    "rating":8.6,
+    "description":"Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits with deadly high stakes: a survival game that has a whopping 45.6 billion-won prize at stake"
+  },
+  {
+    "id": 8,
+    " name":"The Gray Man",
+    "brand":"Netflix",
+    "price":250,
+    "photo":"https://i.postimg.cc/yd5nb78Y/the-gray-man.jpg",
+    "type":"Movie",
+    "rating": 6.7,
+    "description":"When the CIA's most skilled operative, whose true identity is known to none, accidentally uncovers dark agency secrets, a psychopathic former colleague puts a bounty on his head, setting off a global manhunt by international assassins."
+  },
+  {
+    "id": 9,
+    " name":"Joker",
+    "brand":"Warner Bros.",
+    "price":450,
+    "photo":"https://i.postimg.cc/xdfznLbX/joker.webp",
+    "type":"Movie",
+    "rating":7.8,
+    "description":"During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure."
+  },
+  {
+    "id": 10,
+    " name":"Harry Potter",
+    "brand":"Warner Bros.",
+    "price":8.3,
+    "photo":"https://i.postimg.cc/q748q9WM/harry-potter.jpg",
+    "type":"Movie",
+    "rating":8.4,
+    "description":"An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."
+  },
+  {
+    "id": 11,
+    " name":"Barbie",
+    "brand":"Warner Bros.",
+    "price":450,
+    "photo":"https://i.postimg.cc/PfRzyVv2/barbie.jpg",
+    "type":"Movie",
+    "rating":7.9,
+    "description":"With new friends in a new kingdom, Barbie learns what it means to be herself when she trades places with a royal lookalike in this musical adventure."
+  },
+  {
+    "id": 12,
+    " name":"The Dark Knight",
+    "brand":"Warner Bros.",
+    "price":500,
+    "photo":"https://i.postimg.cc/g2Ptpcqx/the-dark-knight.jpg",
+    "type":"Movie",
+    "rating":9.0,
+    "description":"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+  },
+  {
+    "id": 13,
+    " name":"Spider-Man: No Way Home",
+    "brand":"Sony Picture",
+    "price":450,
+    "photo":"https://i.postimg.cc/v8kSPt4L/spriderman.jpg",
+    "type":"Movie",
+    "rating":8.2,
+    "description":"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man."
+  },
+  {
+    "id": 14,
+    " name":"Venom",
+    "brand":"Sony Picture",
+    "price":366,
+    "photo":"https://i.postimg.cc/5yCpcDX5/venom.jpg",
+    "type":"Movie",
+    "rating":8.5,
+    "description":"A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it."
+  },
+  {
+    "id": 15,
+    " name":"Rocket Boys",
+    "brand":"Sony Picture",
+    "price":123,
+    "photo":"https://i.postimg.cc/J0kyPqS2/rocket-boys.webp",
+    "type":"Web Series",
+    "rating":4.7,
+    "description":"The story of two extraordinary men, Dr. Homi Jehangir Bhabha and Dr. Vikram Ambalal Sarabhai, who created history while building India's future."
+  },
+  {
+    "id": 16,
+    " name":"Jumanji",
+    "brand":"Sony Picture",
+    "price":340,
+    "photo":"https://i.postimg.cc/J7vZZySF/jumanji.jpg",
+    "type":"Movie",
+    "rating":7.6,
+    "description":"Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game."
+  },
+  {
+    "id": 17,
+    " name":"Mohanagar",
+    "brand":"Hoichoi",
+    "price":355,
+    "photo":"https://i.postimg.cc/TwSLVSNb/mohanagar-hoichoi.jpg",
+    "type":"Web Series",
+    "rating":8.5,
+    "description":"One fateful night, a police station in Bangladesh, and a motley crowd consisting of criminals, an eminent industrialist, media, general public. What does this night have in store for them?"
+  },
+  {
+    "id": 18,
+    " name":"Srikanto",
+    "brand":"Hoichoi",
+    "price":322,
+    "photo":"https://i.postimg.cc/x8wm27KQ/67128830.webp",
+    "type":"Movie",
+    "rating":4.5,
+    "description":"Srikanto is the musical retelling of Sarat Chandra Chattopadhyay's eponymous novel and presents a modern take on the relationship of Srikanto-Rajlokkhi."
+  },
+  {
+    "id": 19,
+    " name":"Dracula Sir",
+    "brand":"Hoichoi",
+    "price":133,
+    "photo":"https://i.postimg.cc/05tGykYt/draculasir.png",
+    "type":"Movie",
+    "rating":3.7,
+    "description":"A small town school teacher with protruding canine teeth finds that he has striking similarities with the legendary Count Dracula."
+  },
+  {
+    "id": 20,
+    " name":"Rahasya Romancha",
+    "brand":"Hoichoi",
+    "price":233,
+    "photo":"https://i.postimg.cc/B6tP1sps/Rohosyo-Romancho.jpg",
+    "type":"Web Series",
+    "rating":7.9,
+    "description":"Kalo Nekre appoints a private investigator - Mora to find Amrita. But Trilok Chakra Samiti is throwing sinister challenges. Can they crack this mysterious puzzle?"
+  },
+  {
+    "id": 21,
+    " name":"Pathaan",
+    "brand":"Amazon Prime",
+    "price":344,
+    "photo":"https://i.postimg.cc/P571z231/Pathaan.jpg",
+    "type":"Movie",
+    "rating":8.6,
+    "description":"An Indian agent races against a doomsday clock as a ruthless mercenary, with a bitter vendetta, mounts an apocalyptic attack against the country."
+  },
+  {
+    "id": 22,
+    " name":"Mirzapur",
+    "brand":"Amazon Prime",
+    "price":244,
+    "photo":"https://i.postimg.cc/tC6P5qj4/Mirzapur.jpg",
+    "type":"Web Series",
+    "rating":8.2,
+    "description":"A shocking incident at a wedding procession ignites a series of events entangling the lives of two families in the lawless city of Mirzapur."
+  },
+  {
+    "id": 23,
+    " name":"The Tomorrow War",
+    "brand":"Amazon Prime",
+    "price":455,
+    "photo":"https://i.postimg.cc/GpLMBMfr/the-tomorrow-war.jpg",
+    "type":"Movie",
+    "rating":5.6,
+    "description":"A family man is drafted to fight in a future war where the fate of humanity relies on his ability to confront the past."
+  },
+  {
+    "id": 24,
+    " name":"Carnival Row",
+    "brand":"Amazon Prime",
+    "price":344,
+    "photo":"https://i.postimg.cc/MHN7GXJh/Carnival-Row.jpg",
+    "type":"Web Series",
+    "rating":7.8,
+    "description":"A human detective and a fairy rekindle a dangerous affair in a Victorian fantasy world, where the city's uneasy peace collapses when a string of murders reveals an unimaginable monster."
+  }
+  
+]
