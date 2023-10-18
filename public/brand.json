@@ -1,0 +1,33 @@
+[
+
+    {
+        "id": 1,
+        "brand_name": "Disney Plus",
+        "brand_image": "https://i.postimg.cc/63pRP3wK/disney-plus.jpg"
+    },
+    {
+        "id": 2,
+        "brand_name": "Netflix",
+        "brand_image": "https://i.postimg.cc/qv28hSQP/netflix.jpg"
+    },
+    {
+        "id": 3,
+        "brand_name": "Warner Bros.",
+        "brand_image": "https://i.postimg.cc/W4j0M8Hh/warner-bros.webp"
+    },
+    {
+        "id": 4,
+        "brand_name": "Sony Pictures",
+        "brand_image": "https://i.postimg.cc/C1rDpgLq/Sony-Pictures.jpg"
+    },
+    {
+        "id": 5,
+        "brand_name": "Spotify",
+        "brand_image": "https://i.postimg.cc/5t3Lpzhp/spotify.png"
+    },
+    {
+        "id": 6,
+        "brand_name": "Amazon Prime",
+        "brand_image": "https://i.postimg.cc/15kGzs00/amazon-prime-video.jpg"
+    }
+]

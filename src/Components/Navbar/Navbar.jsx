@@ -2,9 +2,11 @@ import { Link, NavLink } from "react-router-dom";
 import { RxVideo } from "react-icons/rx";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { BsCart3 } from "react-icons/bs";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
+  console.log(user);
 
   const handleSignOut =()=>{
     logOut()
@@ -61,12 +63,13 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
+        <div className="navbar-end  text-4xl text-white font-bold mr-4"><BsCart3/></div>
       </div>
       <div className="navbar-end w-full  md:max-w-max flex justify-center md:justify-end ">
         {user ? (
           <span className="flex items-center gap-3 py-3 font-medium ">
           <img src={user.photoURL} className="w-[60px] rounded-full" />
-          <h3 className="w-full">{user.displayName}</h3>
+          <h3 className="w-full capitalize">{user.displayName}</h3>
           <Link
             to={"/login"}
             onClick={handleSignOut}
