@@ -13,26 +13,26 @@ const AddProduct = () => {
 
     console.log(name, brand, price, photo, type, rating, description);
 
-const     product = {name, brand, price, photo, type, rating, description} 
-    fetch('http://localhost:5000/product', {
-      method: 'POST',
+    const product = { name, brand, price, photo, type, rating, description };
+    fetch("http://localhost:5000/product", {
+      method: "POST",
       headers: {
-          'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(product)
-  })
-      .then(res => res.json())
-      .then(data => {
-          console.log(data);
-          if(data.insertedId){
-              Swal.fire({
-                  title: 'Success!',
-                  text: 'Media Added Successfully',
-                  icon: 'success',
-                  confirmButtonText: 'Cool'
-                })
-          }
-      })
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Media Added Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
   };
   return (
     <div className="pt-28 md:pt-20">

@@ -63,7 +63,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
-        <div className="navbar-end  text-4xl text-white font-bold mr-4"><BsCart3/></div>
+        <div className="navbar-end  text-4xl text-white font-bold mr-4"><Link to={"/addToCart"}><BsCart3/></Link></div>
       </div>
       <div className="navbar-end w-full  md:max-w-max flex justify-center md:justify-end ">
         {user ? (
