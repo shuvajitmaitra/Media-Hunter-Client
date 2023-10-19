@@ -8,18 +8,26 @@ const ProductDetails = () => {
   const { _id } = useParams();
   const products = useLoaderData();
 
-
   const product = products.find((singleProduct) => singleProduct._id === _id);
-const {name, brand, price, photo, type, rating, description} = product
+  const { name, brand, price, photo, type, rating, description } = product;
   const { user } = useContext(AuthContext);
   const handleAddToCart = () => {
     console.log("btn clicked");
-    const uid = user.uid
+    const uid = user.uid;
     console.log(user);
     // console.log(product);
     // console.log(name, brand, price, photo, type, rating, description);
 
-    const product = { uid,name, brand, price, photo, type, rating, description };
+    const product = {
+      uid,
+      name,
+      brand,
+      price,
+      photo,
+      type,
+      rating,
+      description,
+    };
     fetch("http://localhost:5000/cart", {
       method: "POST",
       headers: {
@@ -33,7 +41,7 @@ const {name, brand, price, photo, type, rating, description} = product
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "Media Added Successfully",
+            text: "Media Add To Cart Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
@@ -48,11 +56,19 @@ const {name, brand, price, photo, type, rating, description} = product
       <h2 className="text-xl md:text-4xl font-bold py-6">
         {product?.type} details
       </h2>
-      <img
-        src={product?.photo}
-        className="w-96"
-      />
-      <BsCartPlus onClick={handleAddToCart} />
+      <div>
+        <img
+          src={product?.photo}
+          className="w-96 h-56"
+        />
+        <div onClick={handleAddToCart} className="w-full gap-2 flex justify-center cursor-pointer items-center py-2 rounded my-3 mx-auto bg-[#EF6262] text-3xl font-extrabold text-white ">
+          <p className="text-xl font-medium">Add to Cart</p>
+          <BsCartPlus
+            
+            className=""
+          />
+        </div>
+      </div>
     </div>
   );
 };

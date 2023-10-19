@@ -2,7 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import { RxVideo } from "react-icons/rx";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { BsCart3 } from "react-icons/bs";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
@@ -19,6 +18,9 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink to={"/addProduct"}>Add Product</NavLink>
+      </li>
+      <li>
+      <NavLink to={"/addToCart"}>My Cart</NavLink>
       </li>
     </>
   );
@@ -48,7 +50,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 gap-2"
             >
               {navLink}
             </ul>
@@ -61,9 +63,8 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLink}</ul>
+          <ul className="menu menu-horizontal px-1 gap-2">{navLink}</ul>
         </div>
-        <div className="navbar-end  text-4xl text-white font-bold mr-4"><Link to={"/addToCart"}><BsCart3/></Link></div>
       </div>
       <div className="navbar-end w-full  md:max-w-max flex justify-center md:justify-end ">
         {user ? (

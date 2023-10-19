@@ -12,7 +12,6 @@ const Products = () => {
   console.log(products);
   return (
     <div className="pt-28 w-full border">
-      {loadedProduct.length}
       {products.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
           {products.map((product) => (
