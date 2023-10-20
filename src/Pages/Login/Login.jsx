@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { userSignIn, googleSignIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -14,16 +17,47 @@ const Login = () => {
     console.log(email, password);
 
     userSignIn(email, password)
-      .then((result) => {
-        console.log(result.user);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+    .then(() => {
+      Swal.fire(
+        'Login successfully!',
+        '',
+        'success'
+      )
+      console.log(location.state);
+      navigate(location.state ? location.state : "/");
+      e.target.reset();
+    })
+    .catch((error) => {
+      Swal.fire(
+        "email or password Invalid",
+        '',
+        'error'
+      )
+     console.log(error.message);
+    });
 
-  const handleGoogleSingIn = () => {
-    googleSignIn();
+};
+
+const handleGoogleSignIn = () =>{
+  googleSignIn()
+  .then(() => {
+    Swal.fire(
+      'Login successfully!',
+      '',
+      'success'
+    )
+    console.log(location.state);
+    navigate(location.state ? location.state : "/");
+  })
+  .catch((error) => {
+    Swal.fire(
+      `${error.message}`,
+      '',
+      'error'
+    )
+   
+  });
+
   };
   return (
     <div className="pt-32 md:pt-20">
@@ -80,7 +114,7 @@ const Login = () => {
         </div>
         <div className="block mx-auto right-0 left-0 mt-6 bg-[#F3AA60] py-2 px-4 rounded-full text-white">
           <button
-            onClick={handleGoogleSingIn}
+            onClick={handleGoogleSignIn}
             className="flex items-center justify-center text-xl gap-2 font-medium "
           >
             <FcGoogle /> Sign In with Google

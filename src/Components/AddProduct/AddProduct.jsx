@@ -14,13 +14,16 @@ const AddProduct = () => {
     console.log(name, brand, price, photo, type, rating, description);
 
     const product = { name, brand, price, photo, type, rating, description };
-    fetch("http://localhost:5000/product", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(product),
-    })
+    fetch(
+      "https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/product",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(product),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

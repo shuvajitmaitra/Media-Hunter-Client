@@ -9,11 +9,13 @@ import Products from "../Components/Products/Products";
 import ProductDetails from "../Components/ProductDetails/ProductDetails";
 import UpdateProduct from "../Components/UpdateProduct/UpdateProduct";
 import Cart from "../Components/Cart/Cart";
+// import ErrorPage from "../Components/ErrorPage/ErrorPage";
 
 const Router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    // errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -40,7 +42,10 @@ const Router = createBrowserRouter([
       {
         path: "/products/:brand_name",
         element: <Products></Products>,
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch(
+            "https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/product"
+          ),
       },
       {
         path: "/product-details/:_id",
@@ -49,7 +54,10 @@ const Router = createBrowserRouter([
             <ProductDetails></ProductDetails>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/product"),
+        loader: () =>
+          fetch(
+            "https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/product"
+          ),
       },
       {
         path: "/addToCart",
@@ -58,7 +66,10 @@ const Router = createBrowserRouter([
             <Cart></Cart>
           </PrivateRoute>
         ),
-        loader: () => fetch(`http://localhost:5000/cart`),
+        loader: () =>
+          fetch(
+            `https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/cart`
+          ),
       },
       {
         path: "/product-update/:id",
@@ -67,7 +78,10 @@ const Router = createBrowserRouter([
             <UpdateProduct></UpdateProduct>
           </PrivateRoute>
         ),
-        loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`),
+        loader: ({ params }) =>
+          fetch(
+            `https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/product/${params.id}`
+          ),
       },
     ],
   },

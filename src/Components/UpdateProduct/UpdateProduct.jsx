@@ -2,8 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
-    const product = useLoaderData()
-    const     {_id, name, brand, price, photo, type, rating, description} = product 
+  const product = useLoaderData();
+  const { _id, name, brand, price, photo, type, rating, description } = product;
   const handleUpdateProduct = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -16,26 +16,37 @@ const UpdateProduct = () => {
 
     console.log(name, brand, price, photo, type, rating, description);
 
-const     updatedProduct = {name, brand, price, photo, type, rating, description} 
-    fetch(`http://localhost:5000/product/${_id}`, {
-      method: 'PUT',
-      headers: {
-          'content-type': 'application/json'
-      },
-      body: JSON.stringify(updatedProduct)
-  })
-      .then(res => res.json())
-      .then(data => {
-          console.log(data);
-          if(data.modifiedCount){
-              Swal.fire({
-                  title: 'Success!',
-                  text: 'Media Updated Successfully',
-                  icon: 'success',
-                  confirmButtonText: 'Ok'
-                })
-          }
-      })
+    const updatedProduct = {
+      name,
+      brand,
+      price,
+      photo,
+      type,
+      rating,
+      description,
+    };
+    fetch(
+      `https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/product/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updatedProduct),
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount) {
+          Swal.fire({
+            title: "Success!",
+            text: "Media Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+        }
+      });
   };
   return (
     <div className="pt-28 md:pt-20">

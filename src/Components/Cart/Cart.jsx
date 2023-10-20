@@ -21,18 +21,21 @@ const Cart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/cart/${id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/cart/${id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            if (data.deletedCount > 0){
+            if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your media has been deleted.", "success");
             }
             const filteredData = carts.filter((item) => item._id !== id);
             setCarts(filteredData);
-        });
+          });
       }
     });
   };
@@ -45,10 +48,10 @@ const Cart = () => {
             <div key={cart._id}>
               <div className="flex border shadow-md rounded-lg mx-5">
                 <div className="">
-                <img
-                  src={cart.photo}
-                  className="w-72 h-52 md:h-40 overflow-clip rounded-l-lg "
-                />
+                  <img
+                    src={cart.photo}
+                    className="w-72 h-52 md:h-40 overflow-clip rounded-l-lg "
+                  />
                 </div>
                 <div className="w-full border p-3 space-y-1">
                   <div className="flex justify-between items-center ">

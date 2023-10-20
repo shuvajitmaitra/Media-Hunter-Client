@@ -28,13 +28,16 @@ const ProductDetails = () => {
       rating,
       description,
     };
-    fetch("http://localhost:5000/cart", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(product),
-    })
+    fetch(
+      "https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/cart",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(product),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -52,25 +55,49 @@ const ProductDetails = () => {
   // console.log(_id);
   // console.log(product);
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
-      <h2 className="text-xl md:text-4xl font-bold py-6">
-        {product?.type} details
-      </h2>
-      <div>
-        <img
-          src={product?.photo}
-          className="w-96 h-56"
-        />
-        <div onClick={handleAddToCart} className="w-full gap-2 flex justify-center cursor-pointer items-center py-2 rounded my-3 mx-auto bg-[#EF6262] text-3xl font-extrabold text-white ">
-          <p className="text-xl font-medium">Add to Cart</p>
-          <BsCartPlus
-            
-            className=""
+    <div className="bg-gray-300 bg-cover h-screen flex justify-center items-center">
+      <div className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-3 p-6 rounded-md gap-6">
+        <div className="md:col-span-2 bg-white p-8 rounded-lg space-y-6">
+          <img
+            src={product.photo}
+            className=" h-56  rounded-md block right-0 left-0 mx-auto"
           />
+          <p>{product.description}</p>
+        </div>
+        <div className="md:col-span-1">
+          <h3 className="text-xl font-bold  uppercase w-fit pb-2 border-b">
+            product Details
+          </h3>
+          <h2 className="w-fit py-2 border-b">
+            <span className="font-semibold uppercase ">Name: </span>
+            {product.name}
+          </h2>
+          <h2 className="w-fit py-2 border-b">
+            <span className="font-semibold uppercase ">Brand: </span>
+            {product.brand}
+          </h2>
+          <h2 className="w-fit py-2 border-b">
+            <span className="font-semibold uppercase ">Type: </span>
+            {product.type}
+          </h2>
+          <h2 className="w-fit py-2 border-b">
+            <span className="font-semibold uppercase ">Rating: </span>
+            {product.rating}
+          </h2>
+          <p className="w-fit py-2 border-b">
+            <span className="font-semibold uppercase ">price: </span>{" "}
+            {product.price} $
+          </p>
+          <div
+            onClick={handleAddToCart}
+            className="w-full gap-2 flex justify-center cursor-pointer items-center py-2 rounded my-3 mx-auto bg-[#EF6262] text-3xl font-extrabold text-white "
+          >
+            <p className="text-xl font-medium">Add to Cart</p>
+            <BsCartPlus />
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default ProductDetails;
