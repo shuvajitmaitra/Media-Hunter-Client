@@ -11,21 +11,16 @@ const AddProduct = () => {
     const rating = e.target.rating.value;
     const description = e.target.description.value;
 
-
     const product = { name, brand, price, photo, type, rating, description };
-    fetch(
-      "https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/product",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(product),
-      }
-    )
+    fetch("https://assingment-10-media-hunter-server.vercel.app/product", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
       .then((res) => res.json())
       .then((data) => {
-        
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
@@ -71,12 +66,12 @@ const AddProduct = () => {
                 required
               >
                 <option selected>Choose a Brand</option>
-                <option value="Disney">Disney Plus</option>
-                <option value="Netflix">Netflix</option>
-                <option value="Hoichoi">Hoichoi</option>
-                <option value="Warner Bros">Warner Bros</option>
-                <option value="Amazon Prime">Amazon Prime</option>
-                <option value="Sony Picture">Sony Picture</option>
+                <option defaultValue="Disney">Disney Plus</option>
+                <option defaultValue="Netflix">Netflix</option>
+                <option defaultValue="Hoichoi">Hoichoi</option>
+                <option defaultValue="Warner Bros">Warner Bros</option>
+                <option defaultValue="Amazon Prime">Amazon Prime</option>
+                <option defaultValue="Sony Picture">Sony Picture</option>
               </select>
             </div>
             {/* Price */}

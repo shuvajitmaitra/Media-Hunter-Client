@@ -17,6 +17,7 @@ const Products = () => {
 
 const loadedProduct = useLoaderData();
 const { brand_name } = useParams();
+console.log(loadedProduct);
 
   const products = loadedProduct?.filter(
     (product) => product.brand === brand_name
@@ -24,7 +25,7 @@ const { brand_name } = useParams();
   console.log(products);
   return (
    <div className="pt-28">
-    <div className="w-[60%] mx-auto">
+    <div className="w-full md:w-3/5 mx-auto ">
 <Carousel slides={slides} brand_name={brand_name}></Carousel>
     </div>
     <div className=" w-full max-w-screen-xl mx-auto py-10">

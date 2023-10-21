@@ -45,7 +45,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className=" w-full  bg-[#468b97]   text-white font-medium fixed z-50">
+    <div className=" w-full  bg-[#468b97]  font-medium fixed z-50">
       <div className=" md:flex items-center max-w-screen-xl mx-auto">
         <div className="navbar">
           <div className="navbar-start">

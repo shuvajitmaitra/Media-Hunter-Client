@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Footer from "../../Components/Footer/Footer";
-// import bannerBg from "../../assets/banner-bg.svg";
+import bannerBg from "../../assets/banner-bg.svg";
 import { Link } from "react-router-dom";
 import Feedback from "../../Components/Feedback/Feedback";
 import Teams from "../../Components/Teams/Teams";
@@ -9,9 +9,9 @@ const Home = () => {
   const brands = useLoaderData();
   return (
     <div className="">
-      <div className="bg-banner bg-cover bg-blend-overlay opacity-80 h-screen flex justify-center items-center">
-       
-        <h3 className="text-2xl font-bold md:text-6xl text-white">
+      <div className="relative  h-screen flex justify-center items-center">
+       <img src={bannerBg} className="h-full opacity-80" />
+        <h3 className="text-2xl font-bold md:text-6xl absolute">
           Find Your Favorite Media
         </h3>
       </div>

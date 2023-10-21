@@ -12,6 +12,7 @@ const [totalSlides, setTotalSlides] = useState([])
   }, []);
 
   const slides = totalSlides.filter(slide => slide.brand === brand_name)
+  console.log(slides);
   
 
   const [current, setCurrent] = useState(0);
@@ -42,7 +43,7 @@ const [totalSlides, setTotalSlides] = useState([])
           <img
             src={slide.slides_img}
             alt={`Slide ${index}`}
-            key={index}
+            key={slide.id}
           />
         ))}
       </div>
@@ -58,7 +59,7 @@ const [totalSlides, setTotalSlides] = useState([])
         {slides.map((slide, index) => {
           return (
             <div
-              key={"circle" + index}
+              key={slide.id}
               className={`rounded-full w-3 h-3 ${
                 index === current ? "bg-white" : "bg-gray-500"
               }`}

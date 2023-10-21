@@ -14,8 +14,6 @@ const UpdateProduct = () => {
     const rating = e.target.rating.value;
     const description = e.target.description.value;
 
-  
-
     const updatedProduct = {
       name,
       brand,
@@ -26,7 +24,7 @@ const UpdateProduct = () => {
       description,
     };
     fetch(
-      `https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/product/${_id}`,
+      `https://assingment-10-media-hunter-server.vercel.app/product/${_id}`,
       {
         method: "PUT",
         headers: {
@@ -37,7 +35,7 @@ const UpdateProduct = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        if (data.modifiedCount>0) {
+        if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
             text: "Media Updated Successfully",

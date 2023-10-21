@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const Cart = () => {
   const { user } = useContext(AuthContext);
   const cartData = useLoaderData();
-  const newCarts = cartData.filter((cart) => cart.uid === user.uid);
+  const newCarts = cartData?.filter((cart) => cart.uid === user.uid);
   const [carts, setCarts] = useState(newCarts);
 
   const handleDelete = (id) => {
@@ -22,7 +22,7 @@ const Cart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/cart/${id}`,
+          `https://assingment-10-media-hunter-server.vercel.app/cart/${id}`,
           {
             method: "DELETE",
           }

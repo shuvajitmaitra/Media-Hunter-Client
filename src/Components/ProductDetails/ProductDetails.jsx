@@ -13,7 +13,7 @@ const ProductDetails = () => {
   const { user } = useContext(AuthContext);
   const handleAddToCart = () => {
     const uid = user.uid;
-    
+
     const product = {
       uid,
       name,
@@ -24,16 +24,13 @@ const ProductDetails = () => {
       rating,
       description,
     };
-    fetch(
-      "https://assingment-10-media-hunter-server-98gi7m8jc.vercel.app/cart",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(product),
-      }
-    )
+    fetch("https://assingment-10-media-hunter-server.vercel.app/cart", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(product),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
