@@ -1,9 +1,9 @@
 [
 
     {
-        "id": 1,
+        "id": 3,
         "brand": "Amazon Prime",
-        "slides_img": "https://i.postimg.cc/kgxQnn1p/amazon-prime-video.jpg"
+        "slides_img": "https://i.postimg.cc/bYKfBxsD/az-3.jpg"
     },
     {
         "id": 2,
@@ -11,9 +11,9 @@
         "slides_img": "https://i.postimg.cc/QtwX5rq4/maxresdefault.jpg"
     },
     {
-        "id": 3,
+        "id": 1,
         "brand": "Amazon Prime",
-        "slides_img": "https://i.postimg.cc/bYKfBxsD/az-3.jpg"
+        "slides_img": "https://i.postimg.cc/kgxQnn1p/amazon-prime-video.jpg"
     },
     {
         "id": 4,
