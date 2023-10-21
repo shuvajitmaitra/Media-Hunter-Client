@@ -1,4 +1,6 @@
 [
+  
+
 
     {
         "id": 1,
@@ -15,15 +17,16 @@
         "brand_name": "Warner Bros",
         "brand_image": "https://i.postimg.cc/W4j0M8Hh/warner-bros.webp"
     },
+    
     {
         "id": 4,
-        "brand_name": "Sony Pictures",
-        "brand_image": "https://i.postimg.cc/C1rDpgLq/Sony-Pictures.jpg"
+        "brand_name": "Hoichoi",
+        "brand_image": "https://i.postimg.cc/R035yDVG/Hoichoi.png"
     },
     {
         "id": 5,
-        "brand_name": "Hoichoi",
-        "brand_image": "https://i.postimg.cc/R035yDVG/Hoichoi.png"
+        "brand_name": "Sony Picture",
+        "brand_image": "https://i.postimg.cc/C1rDpgLq/Sony-Pictures.jpg"
     },
     {
         "id": 6,

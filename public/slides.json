@@ -1,58 +1,59 @@
 [
+
     {
         "id": 1,
         "brand": "Amazon Prime",
-        "slides_img": " https://i.postimg.cc/50gXrJnj/amazon-ad-1.jpg"
+        "slides_img": "https://i.postimg.cc/Fzwb96XL/amazon-ad-1.jpg"
     },
     {
         "id": 2,
         "brand": "Amazon Prime",
-        "slides_img": " https://i.postimg.cc/0Ndj6xgZ/amazon-ad-2.jpg"
+        "slides_img": "https://i.postimg.cc/Jn45KJQG/amazon-ad-2.webp"
     },
     {
         "id": 3,
         "brand": "Amazon Prime",
-        "slides_img": "https://i.postimg.cc/CLLQX4LK/amazon-ad-3.jpg"
+        "slides_img": "https://i.postimg.cc/XNPkcrBY/amazon-ad-3.jpg"
     },
     {
         "id": 4,
         "brand": "Disney",
-        "slides_img": "https://i.postimg.cc/jSfLbPZp/Disney-add-1.jpg"
+        "slides_img": "https://i.postimg.cc/d3hmcYpF/Disney-add-1.jpg"
     },
     {
         "id": 5,
         "brand": "Disney",
-        "slides_img": "https://i.postimg.cc/9MC410Pv/disney-ad-2.jpg"
+        "slides_img": "https://i.postimg.cc/L6ZBymjB/disney-ad-2.jpg"
     },
     {
         "id": 6,
         "brand": "Disney",
-        "slides_img": "https://i.postimg.cc/L5ZM1BYR/disney-ad-3.webp"
+        "slides_img": "https://i.postimg.cc/Y9nfP9X8/disney-ad-3.webp"
     },
     {
         "id": 7,
         "brand": "Hoichoi",
-        "slides_img": "https://i.postimg.cc/2yXVzwpD/hoichoi-ad-1.jpg"
+        "slides_img": "https://i.postimg.cc/mgf3JKwx/hoichoi-ad-1.jpg"
     },
     {
         "id": 8,
         "brand": "Hoichoi",
-        "slides_img": "https://i.postimg.cc/NfcgHS4z/hoichoi-ad-2.jpg"
+        "slides_img": "https://i.postimg.cc/sfMNrdp1/hoichoi-ad-2.webp"
     },
     {
         "id": 9,
         "brand": "Hoichoi",
-        "slides_img": "https://i.postimg.cc/gkQnQNqy/hoichoi-ad-3.jpg"
+        "slides_img": "https://i.postimg.cc/L8tkpvCJ/hoichoi-ad-3.jpg"
     },
     {
         "id": 10,
         "brand": "Netflix",
-        "slides_img": "https://i.postimg.cc/sXGVYRqt/Netflix-ad-1.jpg"
+        "slides_img": "https://i.postimg.cc/KzZS5c4J/Netflix-ad-1.jpg"
     },
     {
         "id": 11,
         "brand": "Netflix",
-        "slides_img": "https://i.postimg.cc/5040LGbJ/netflix-add-2.jpg"
+        "slides_img": "https://i.postimg.cc/xC4MRZC4/Netflix-ad-2.jpg"
     },
     {
         "id": 12,
@@ -62,32 +63,31 @@
     {
         "id": 13,
         "brand": "Sony Picture",
-        "slides_img": "https://i.postimg.cc/d1rbQQzt/sony-ad-1.jpg"
+        "slides_img": "https://i.postimg.cc/BvNx8bGs/sony-ad-1.jpg"
     },
     {
         "id": 14,
         "brand": "Sony Picture",
-        "slides_img": "https://i.postimg.cc/7hcZvZ7P/sony-ad-2.jpg"
+        "slides_img": "https://i.postimg.cc/qq6nZG6M/sony-ad-2.webp"
     },
     {
         "id": 15,
         "brand": "Sony Picture",
-        "slides_img": "https://i.postimg.cc/qvQM0w2Z/sony-ad-3.jpg"
+        "slides_img": "https://i.postimg.cc/cJGNrBWq/sony-ad-3.jpg"
     },
     {
         "id": 16,
         "brand": "Warner Bros",
-        "slides_img": "https://i.postimg.cc/y8r4vbmB/Warner-ad-1.jpg"
+        "slides_img": "https://i.postimg.cc/cLpdfNQb/Warner-ad-1.jpg"
     },
     {
         "id": 17,
         "brand": "Warner Bros",
-        "slides_img": "https://i.postimg.cc/cLd4V2tn/Warner-ad-2.jpg"
+        "slides_img": "https://i.postimg.cc/9MMyy2W9/warner-bros-ad-2.webp"
     },
     {
         "id": 18,
         "brand": "Warner Bros",
-        "slides_img": "https://i.postimg.cc/mgZBd9K3/Warner-Bros-ad-3.jpg"
+        "slides_img": "https://i.postimg.cc/NLhThrR8/Warner-Bros-ad-3.jpg"
     }
-    
 ]

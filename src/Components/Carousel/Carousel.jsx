@@ -1,9 +1,17 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 
-const Carousel = ({ slides }) => {
-  console.log(slides);
+const Carousel = ({brand_name }) => {
+const [totalSlides, setTotalSlides] = useState([])
+
+  useEffect(() => {
+    fetch("/slides.json")
+      .then((response) => response.json())
+      .then((data) => setTotalSlides(data));
+  }, []);
+
+  const slides = totalSlides.filter(slide => slide.brand === brand_name)
   
 
   const [current, setCurrent] = useState(0);
@@ -32,7 +40,7 @@ const Carousel = ({ slides }) => {
       >
         {slides?.map((slide, index) => (
           <img
-            src={slide}
+            src={slide.slides_img}
             alt={`Slide ${index}`}
             key={index}
           />
@@ -62,7 +70,7 @@ const Carousel = ({ slides }) => {
   );
 };
 Carousel.propTypes ={
-    slides: PropTypes.array
+    brand_name: PropTypes.string
 }
 
 

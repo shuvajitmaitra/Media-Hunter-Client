@@ -12,12 +12,8 @@ const ProductDetails = () => {
   const { name, brand, price, photo, type, rating, description } = product;
   const { user } = useContext(AuthContext);
   const handleAddToCart = () => {
-    console.log("btn clicked");
     const uid = user.uid;
-    console.log(user);
-    // console.log(product);
-    // console.log(name, brand, price, photo, type, rating, description);
-
+    
     const product = {
       uid,
       name,
@@ -40,7 +36,6 @@ const ProductDetails = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
@@ -51,9 +46,7 @@ const ProductDetails = () => {
         }
       });
   };
-  // console.log(products);
-  // console.log(_id);
-  // console.log(product);
+
   return (
     <div className="bg-gray-300 bg-cover h-screen flex justify-center items-center">
       <div className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-3 p-6 rounded-md gap-6">

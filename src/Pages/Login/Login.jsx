@@ -14,7 +14,6 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
 
-    console.log(email, password);
 
     userSignIn(email, password)
     .then(() => {
@@ -23,7 +22,6 @@ const Login = () => {
         '',
         'success'
       )
-      console.log(location.state);
       navigate(location.state ? location.state : "/");
       e.target.reset();
     })
@@ -46,7 +44,6 @@ const handleGoogleSignIn = () =>{
       '',
       'success'
     )
-    console.log(location.state);
     navigate(location.state ? location.state : "/");
   })
   .catch((error) => {

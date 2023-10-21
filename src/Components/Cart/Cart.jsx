@@ -29,11 +29,10 @@ const Cart = () => {
         )
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your media has been deleted.", "success");
             }
-            const filteredData = carts.filter((item) => item._id !== id);
+            const filteredData = carts?.filter((item) => item._id !== id);
             setCarts(filteredData);
           });
       }
@@ -42,9 +41,9 @@ const Cart = () => {
 
   return (
     <div>
-      {carts.length > 0 ? (
+      {carts?.length > 0 ? (
         <div className="max-w-screen-lg mx-auto gap-6 pt-32 grid grid-cols-1 md:grid-cols-2">
-          {carts.map((cart) => (
+          {carts?.map((cart) => (
             <div key={cart._id}>
               <div className="flex border shadow-md rounded-lg mx-5">
                 <div className="">

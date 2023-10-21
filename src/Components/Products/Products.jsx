@@ -18,21 +18,21 @@ const Products = () => {
 const loadedProduct = useLoaderData();
 const { brand_name } = useParams();
 
-  const products = loadedProduct.filter(
+  const products = loadedProduct?.filter(
     (product) => product.brand === brand_name
   );
   console.log(products);
   return (
    <div className="pt-28">
     <div className="w-[60%] mx-auto">
-<Carousel slides={slides} ></Carousel>
+<Carousel slides={slides} brand_name={brand_name}></Carousel>
     </div>
     <div className=" w-full max-w-screen-xl mx-auto py-10">
      
 
-     {products.length > 0 ? (
+     {products?.length > 0 ? (
        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
-         {products.map((product) => (
+         {products?.map((product) => (
            <span
              key={product._id}
              className="p-4 bg-slate-200 rounded"
@@ -55,7 +55,7 @@ const { brand_name } = useParams();
                {product.type}
                </div>
              </div>
-             <div className="w-full py-1 flex justify-between">
+             <div className="w-full py-1 flex justify-between ">
                <div >
                <span className="font-semibold uppercase ">Price: </span>
                {product.price} $
@@ -66,12 +66,12 @@ const { brand_name } = useParams();
                </div>
              </div>
              <p className="w-fit py-1">
-               {product.description.slice(0, 100)}...
+               {product?.description.slice(0, 100)}...
              </p>
 
              <Link
                to={`/product-details/${product._id}`}
-               className="w-full gap-2 flex justify-center cursor-pointer items-center py-2 rounded my-3 mx-auto bg-[#468B97] text-3xl font-extrabold text-white "
+               className="w-full gap-2 flex justify-center cursor-pointer items-center py-2 rounded my-3 mx-auto bg-[#468B97] text-3xl font-extrabold text-white  "
              >
                <p className="text-xl font-medium">Details</p>
                <CgDetailsMore></CgDetailsMore>

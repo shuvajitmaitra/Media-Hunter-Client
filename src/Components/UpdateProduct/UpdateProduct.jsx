@@ -14,7 +14,7 @@ const UpdateProduct = () => {
     const rating = e.target.rating.value;
     const description = e.target.description.value;
 
-    console.log(name, brand, price, photo, type, rating, description);
+  
 
     const updatedProduct = {
       name,
@@ -37,8 +37,7 @@ const UpdateProduct = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        if (data.modifiedCount) {
+        if (data.modifiedCount>0) {
           Swal.fire({
             title: "Success!",
             text: "Media Updated Successfully",
@@ -49,8 +48,8 @@ const UpdateProduct = () => {
       });
   };
   return (
-    <div className="pt-28 md:pt-20">
-      <h2 className="text-xl md:text-4xl text-center font-bold">
+    <div className="pt-28 md:pt-24">
+      <h2 className="text-xl md:text-5xl text-center font-bold">
         Update {name} {type}
       </h2>
       <form onSubmit={handleUpdateProduct}>

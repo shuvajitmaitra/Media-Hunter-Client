@@ -11,7 +11,6 @@ const AddProduct = () => {
     const rating = e.target.rating.value;
     const description = e.target.description.value;
 
-    console.log(name, brand, price, photo, type, rating, description);
 
     const product = { name, brand, price, photo, type, rating, description };
     fetch(
@@ -26,7 +25,7 @@ const AddProduct = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
@@ -34,12 +33,13 @@ const AddProduct = () => {
             icon: "success",
             confirmButtonText: "Cool",
           });
+          e.target.reset();
         }
       });
   };
   return (
-    <div className="pt-28 md:pt-20">
-      <h2 className="text-xl md:text-4xl text-center font-bold">
+    <div className="pt-28 md:pt-24">
+      <h2 className="text-xl md:text-5xl text-center font-bold">
         Add Your Media
       </h2>
       <form onSubmit={handleAddProduct}>
@@ -63,13 +63,21 @@ const AddProduct = () => {
               <label className="label">
                 <span className="label-text">Brand Name</span>
               </label>
-              <input
+              <select
                 type="text"
                 name="brand"
                 placeholder="Enter Your Brand Name..."
                 className="input input-bordered rounded"
                 required
-              />
+              >
+                <option selected>Choose a Brand</option>
+                <option value="Disney">Disney Plus</option>
+                <option value="Netflix">Netflix</option>
+                <option value="Hoichoi">Hoichoi</option>
+                <option value="Warner Bros">Warner Bros</option>
+                <option value="Amazon Prime">Amazon Prime</option>
+                <option value="Sony Picture">Sony Picture</option>
+              </select>
             </div>
             {/* Price */}
             <div className="form-control">
