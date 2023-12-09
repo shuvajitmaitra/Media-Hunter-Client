@@ -2,8 +2,8 @@
 
  #### Site Type: Movie related Website        
  [Live Site](https://media-hunter-io.web.app)    
- [Client-Side Repository Link](https://github.com/shuvajitmaitra/Inventory-Management-client)    
- [Server-Side Repository Link](https://github.com/shuvajitmaitra/Inventory-Management-Server)    
+ [Client-Side Repository Link](https://github.com/shuvajitmaitra/Media-Hunter-Client)    
+ [Server-Side Repository Link](https://github.com/shuvajitmaitra/Media-Hunter-Server)    
 
 ## 🪶 Key Features
 - Firebase Authentication in login page & Registration page
