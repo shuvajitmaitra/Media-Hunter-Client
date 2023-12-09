@@ -23,16 +23,13 @@ const UpdateProduct = () => {
       rating,
       description,
     };
-    fetch(
-      `https://assingment-10-media-hunter-server.vercel.app/product/${_id}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(updatedProduct),
-      }
-    )
+    fetch(`http://localhost:5000/product/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedProduct),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {

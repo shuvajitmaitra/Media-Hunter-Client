@@ -1,7 +1,9 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { CgDetailsMore } from "react-icons/cg";
 import { FiEdit } from "react-icons/fi";
 import Carousel from "../Carousel/Carousel";
+import axios from "axios";
+import { useState } from "react";
 
 const Products = () => {
   let slides = [
@@ -14,15 +16,20 @@ const Products = () => {
   "https://i.postimg.cc/cLpdfNQb/Warner-ad-1.jpg",
   "https://i.postimg.cc/Sx7MBgj0/loki.webp",
 ]
-
-const loadedProduct = useLoaderData();
+const [products, setProducts] = useState([])
 const { brand_name } = useParams();
-console.log(loadedProduct);
+axios.get(`http://localhost:5000/product?brand=${brand_name}`)
+.then(res=>{
+  setProducts(res.data)
+})
 
-  const products = loadedProduct?.filter(
-    (product) => product.brand === brand_name
-  );
-  console.log(products);
+// const loadedProduct = useLoaderData();
+// console.log(loadedProduct);
+
+//   const products = loadedProduct?.filter(
+//     (product) => product.brand === brand_name
+//   );
+//   console.log(products);
   return (
    <div className="pt-28">
     <div className="w-full md:w-3/5 mx-auto ">

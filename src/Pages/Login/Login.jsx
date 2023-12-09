@@ -1,11 +1,13 @@
-import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+// import { useContext } from "react";
+// import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import useAuth from "../../Hook/useAuth";
 
 const Login = () => {
-  const { userSignIn, googleSignIn } = useContext(AuthContext);
+  // const { userSignIn, googleSignIn } = useContext(AuthContext);
+  const {userSignIn, googleSignIn} = useAuth()
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -70,6 +72,8 @@ const handleGoogleSignIn = () =>{
           <input
             type="email"
             name="email"
+            defaultValue={'shuvajitmaitra@gmail.com'}
+
             placeholder="email"
             className="input input-bordered"
             required
@@ -82,6 +86,7 @@ const handleGoogleSignIn = () =>{
           <input
             type="password"
             name="password"
+            defaultValue={"Hello#3"}
             placeholder="password"
             className="input input-bordered"
             required

@@ -9,6 +9,7 @@ import {
 import PropTypes from "prop-types"
 import { createContext, useEffect, useState } from "react";
 import auth from "../Config/firebase.config";
+import axios from "axios";
 
 export const AuthContext = createContext(null);
 const googleProvider = new GoogleAuthProvider();
@@ -43,10 +44,24 @@ const AuthProvider = ({ children }) => {
   // onAuthStateChanged.......
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
+      const userEmail = currentUser?.email || user?.email;
       setUser(currentUser);
+      const loggedUser = {email: userEmail}
+      if(currentUser){
+        // console.log(loggedUser);
+        axios.post('http://localhost:5000/jwt', loggedUser, {withCredentials: true} )
+        .then(res =>{
+          console.log("from the auth provider in line of 52.......................",res.data);
+        })
+      }else{
+        axios.post("http://localhost:5000/logout", loggedUser, {withCredentials: true})
+        .then(res =>{
+          console.log(res.data);
+        })
+      }
       setLoading(false);
     });
-  }, []);
+  }, [user]);
 
   const authInfo = {
     user,

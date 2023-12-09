@@ -1,8 +1,9 @@
-import { useContext } from "react";
+// import { useContext } from "react";
+// import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { BsCartPlus } from "react-icons/bs";
 import { useLoaderData, useParams } from "react-router-dom";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import useAuth from "../../Hook/useAuth";
 
 const ProductDetails = () => {
   const { _id } = useParams();
@@ -10,12 +11,12 @@ const ProductDetails = () => {
 
   const product = products.find((singleProduct) => singleProduct._id === _id);
   const { name, brand, price, photo, type, rating, description } = product;
-  const { user } = useContext(AuthContext);
+  // const { user } = useContext(AuthContext);
+  const {user} = useAuth()
   const handleAddToCart = () => {
-    const uid = user.uid;
 
     const product = {
-      uid,
+      email: user.email,
       name,
       brand,
       price,
@@ -24,7 +25,7 @@ const ProductDetails = () => {
       rating,
       description,
     };
-    fetch("https://assingment-10-media-hunter-server.vercel.app/cart", {
+    fetch("http://localhost:5000/cart", {
       method: "POST",
       headers: {
         "content-type": "application/json",

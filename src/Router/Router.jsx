@@ -42,8 +42,7 @@ const Router = createBrowserRouter([
       {
         path: "/products/:brand_name",
         element: <Products></Products>,
-        loader: () =>
-          fetch("https://assingment-10-media-hunter-server.vercel.app/product"),
+        loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/product-details/:_id",
@@ -52,8 +51,7 @@ const Router = createBrowserRouter([
             <ProductDetails></ProductDetails>
           </PrivateRoute>
         ),
-        loader: () =>
-          fetch("https://assingment-10-media-hunter-server.vercel.app/product"),
+        loader: () => fetch("http://localhost:5000/product"),
       },
       {
         path: "/addToCart",
@@ -62,8 +60,8 @@ const Router = createBrowserRouter([
             <Cart></Cart>
           </PrivateRoute>
         ),
-        loader: () =>
-          fetch(`https://assingment-10-media-hunter-server.vercel.app/cart`),
+        // loader: () =>
+        //   fetch(`http://localhost:5000/cart`, {credentials: "include"}),
       },
       {
         path: "/product-update/:id",
@@ -73,9 +71,7 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://assingment-10-media-hunter-server.vercel.app/product/${params.id}`
-          ),
+          fetch(`http://localhost:5000/product/${params.id}`),
       },
     ],
   },

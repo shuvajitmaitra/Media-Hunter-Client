@@ -1,6 +1,8 @@
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../Hook/useAxiosSecure";
 
 const AddProduct = () => {
+  const axiosSecure = useAxiosSecure();
   const handleAddProduct = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -12,25 +14,38 @@ const AddProduct = () => {
     const description = e.target.description.value;
 
     const product = { name, brand, price, photo, type, rating, description };
-    fetch("https://assingment-10-media-hunter-server.vercel.app/product", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(product),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          Swal.fire({
-            title: "Success!",
-            text: "Media Added Successfully",
-            icon: "success",
-            confirmButtonText: "Cool",
-          });
-          e.target.reset();
-        }
-      });
+    // data fetch using custom hook............
+    axiosSecure.post("/product", product).then((res) => {
+      console.log(res.data);
+      if (res.data.insertedId) {
+        Swal.fire({
+          title: "Success!",
+          text: "Media Added Successfully",
+          icon: "success",
+          confirmButtonText: "Cool",
+        });
+        e.target.reset();
+      }
+    });
+    // fetch("http://localhost:5000/product", {
+    //   method: "POST",
+    //   headers: {
+    //     "content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(product),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    // if (data.insertedId) {
+    //   Swal.fire({
+    //     title: "Success!",
+    //     text: "Media Added Successfully",
+    //     icon: "success",
+    //     confirmButtonText: "Cool",
+    //   });
+    //   e.target.reset();
+    // }
+    //   });
   };
   return (
     <div className="pt-28 md:pt-24">
@@ -59,20 +74,20 @@ const AddProduct = () => {
                 <span className="label-text">Brand Name</span>
               </label>
               <select
-                type="text"
-                name="brand"
-                placeholder="Enter Your Brand Name..."
-                className="input input-bordered rounded"
-                required
-              >
-                <option selected>Choose a Brand</option>
-                <option defaultValue="Disney">Disney Plus</option>
-                <option defaultValue="Netflix">Netflix</option>
-                <option defaultValue="Hoichoi">Hoichoi</option>
-                <option defaultValue="Warner Bros">Warner Bros</option>
-                <option defaultValue="Amazon Prime">Amazon Prime</option>
-                <option defaultValue="Sony Picture">Sony Picture</option>
-              </select>
+  type="text"
+  name="brand"
+  placeholder="Enter Your Brand Name..."
+  className="input input-bordered rounded"
+  required
+>
+  <option  disabled selected>Choose a Brand</option>
+  <option value="Disney">Disney</option>
+  <option value="Netflix">Netflix</option>
+  <option value="Hoichoi">Hoichoi</option>
+  <option value="Warner Bros">Warner Bros</option>
+  <option value="Amazon Prime">Amazon Prime</option>
+  <option value="Sony Picture">Sony Picture</option>
+</select>
             </div>
             {/* Price */}
             <div className="form-control">

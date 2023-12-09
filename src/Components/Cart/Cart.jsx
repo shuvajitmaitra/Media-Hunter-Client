@@ -1,14 +1,24 @@
-import { useContext, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+// import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
+// import axios from "axios";
+import useAxiosSecure from "../../Hook/useAxiosSecure";
 
 const Cart = () => {
   const { user } = useContext(AuthContext);
-  const cartData = useLoaderData();
-  const newCarts = cartData?.filter((cart) => cart.uid === user.uid);
-  const [carts, setCarts] = useState(newCarts);
+  const axiosSecure = useAxiosSecure()
+  const [carts, setCarts] = useState([]);
+  useEffect(() => {
+    axiosSecure.get(`/cart?email=${user?.email}`)
+      .then((res) => {
+        console.log(res.data);
+        setCarts(res.data);
+      });
+  }, [user, axiosSecure]);
+  // const cartData = useLoaderData();
+  // const newCarts = cartData?.filter((cart) => cart.uid === user.uid);
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -21,12 +31,9 @@ const Cart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          `https://assingment-10-media-hunter-server.vercel.app/cart/${id}`,
-          {
-            method: "DELETE",
-          }
-        )
+        fetch(`http://localhost:5000/cart/${id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {

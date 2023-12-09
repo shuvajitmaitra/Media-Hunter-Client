@@ -1,11 +1,16 @@
+import axios from "axios";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
 const Teams = () => {
   const [members, setMembers] = useState([]);
-  fetch("/teams.json")
-    .then((res) => res.json())
-    .then((data) => setMembers(data));
+  // fetch("/teams.json")
+  //   .then((res) => res.json())
+  //   .then((data) => setMembers(data));
+  axios.get("/teams.json")
+  .then(res =>{
+    setMembers(res.data)
+  })
   return (
       <div>
         <h2 className="text-2xl md:text-5xl font-bold text-center pt-10">Meet Our Team</h2>
