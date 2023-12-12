@@ -9,7 +9,7 @@ const Home = () => {
   const brands = useLoaderData();
   return (
     <div className="">
-      <div className="relative  h-screen flex justify-center items-center">
+      <div className="relative  h-screen max-h-[600px] flex justify-center items-center">
        <img src={bannerBg} className="h-full opacity-80" />
         <h3 className="text-2xl font-bold md:text-6xl absolute">
           Find Your Favorite Media
